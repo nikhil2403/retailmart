@@ -1,0 +1,11 @@
+version: '2'
+services:
+  retailmartv3:
+    build:
+      context: .
+      args:
+        JAR_FILE: retailmart-0.0.1-SNAPSHOT.jar
+    ports: 
+        - "8080:8080"
+  red: 
+    image: redis    
