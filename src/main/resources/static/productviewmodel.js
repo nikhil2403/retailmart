@@ -17,7 +17,7 @@ var ViewModel = function() {
 
     var self = this;
     self.products = ko.observableArray();
-    $.get("http://localhost:8080/product")
+    $.get("http://localhost:8081/product")
         .done(function(data){
             console.log(data);
             for (var key in data){
@@ -38,7 +38,7 @@ console.log(error)
         self.newProduct(product);
     };
     self.getProduct = function (){
-        $.get("http://localhost:8080/product/"+self.idToFetch())
+        $.get("http://localhost:8081/product/"+self.idToFetch())
             .done(function(data){
                 console.log(data);
                 self.displayProduct(new Product(data));
@@ -55,7 +55,7 @@ console.log(error)
         console.log(JSON.stringify(self.newProduct()))
 
         $.ajax({
-            url: "http://localhost:8080/product",
+            url: "http://localhost:8081/product",
             contentType: "application/json",
             type:"POST",
             data: ko.toJSON(this)
@@ -77,7 +77,7 @@ console.log(error)
         console.log(JSON.stringify(self.newProduct()))
 
         $.ajax({
-            url: "http://localhost:8080/product",
+            url: "http://localhost:8081/product",
             contentType: "application/json",
             type:"PUT",
             data: ko.toJSON(this),
@@ -98,7 +98,7 @@ console.log(error)
         var item = this;
 
         $.ajax({
-            url: "http://localhost:8080/product/"+item.id(),
+            url: "http://localhost:8081/product/"+item.id(),
             type:"DELETE",
         })
             .done(function(data){
