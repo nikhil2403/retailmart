@@ -13,7 +13,7 @@ spec:
       containers:
       - name: rest-example
         image: nikhil24/retailmart:0.0.1-SNAPSHOT
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: 100m
