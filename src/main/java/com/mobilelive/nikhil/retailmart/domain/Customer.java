@@ -3,7 +3,7 @@ package com.mobilelive.nikhil.retailmart.domain;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Customer {
     @Id
     @GeneratedValue
@@ -11,9 +11,11 @@ public class Customer {
 
     @Column
     private String name;
-    @ManyToMany
+
+   /* @ManyToMany
     @JoinTable(name = "customer_order",joinColumns = {@JoinColumn(name = "name",referencedColumnName = "cname")}
     , inverseJoinColumns = { @JoinColumn( name = "pname",
             referencedColumnName = "name" ) })
     List<Product> productList;
+    */
 }
