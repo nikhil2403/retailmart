@@ -18,6 +18,7 @@
         <java.version>1.8</java.version>
         <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
         <aws-lambda-java-core.version>1.1.0</aws-lambda-java-core.version>
+        <TAG>${project.version}</TAG>
     </properties>
 
     <dependencies>
@@ -96,7 +97,8 @@
                 </executions>
                 <configuration>
                     <repository>nikhil24/retailmart</repository>
-                    <tag>${project.version}</tag>
+                    <!--<tag>${project.version}</tag>-->
+                    <tag>${TAG}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
