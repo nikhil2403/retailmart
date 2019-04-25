@@ -15,7 +15,7 @@ import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class RedisConf {
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
