@@ -8,7 +8,7 @@
         <version>2.1.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.mobileLIVE.nikhil</groupId>
+    <groupId>com.nikhil.project</groupId>
     <artifactId>retailmart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>retailmart</name>
@@ -70,7 +70,6 @@
             <id>nikhil</id>
             <name>nikhil24</name>
             <uniqueVersion>false</uniqueVersion>
-            <layout>legacy</layout>
             <url>https://index.docker.io/v1/</url>
         </repository>
     </distributionManagement>
